@@ -1,0 +1,53 @@
+<div class="container">
+  <h1>Jogos da Copa do Mundo</h1>
+
+  <div class="alert alert-erro" *ngIf="mensagemErro">{{ mensagemErro }}</div>
+  <p *ngIf="carregando">Carregando jogos...</p>
+
+  <div class="lista-jogos" *ngIf="!carregando">
+    <div class="card jogo-card" *ngFor="let jogo of jogos">
+      <div class="jogo-info">
+        <span class="fase">{{ jogo.fase }}</span>
+        <span class="data">{{ jogo.dataHora | date: 'dd/MM/yyyy HH:mm' }}</span>
+      </div>
+
+      <div class="confronto">
+        <div class="time">
+          <span class="sigla">{{ jogo.timeCasa.sigla }}</span>
+          <span class="nome">{{ jogo.timeCasa.nome }}</span>
+        </div>
+
+        <div class="placar">
+          <ng-container *ngIf="jogo.status === 'finalizado'; else semPlacar">
+            {{ jogo.golsCasa }} x {{ jogo.golsFora }}
+          </ng-container>
+          <ng-template #semPlacar>vs</ng-template>
+        </div>
+
+        <div class="time">
+          <span class="sigla">{{ jogo.timeFora.sigla }}</span>
+          <span class="nome">{{ jogo.timeFora.nome }}</span>
+        </div>
+      </div>
+
+      <div class="jogo-rodape">
+        <span class="estadio">{{ jogo.estadio }}</span>
+        <span class="status status-{{ jogo.status }}">{{ jogo.status }}</span>
+      </div>
+
+      <a
+        *ngIf="podeApostar(jogo) && authService.estaAutenticado()"
+        class="btn btn-secondary"
+        [routerLink]="['/apostas/nova', jogo._id]"
+      >
+        Fazer aposta
+      </a>
+
+      <a *ngIf="podeApostar(jogo) && !authService.estaAutenticado()" class="btn btn-secondary" routerLink="/login">
+        Entrar para apostar
+      </a>
+    </div>
+
+    <p *ngIf="jogos.length === 0">Nenhum jogo cadastrado até o momento.</p>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+.lista-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.jogo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jogo-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.confronto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.time .sigla {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.time .nome {
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}
+
+.placar {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 12px;
+}
+
+.jogo-rodape {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-agendado {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-em_andamento {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-finalizado {
+  background: #e6f4ea;
+  color: #1e7d32;
+}
+
+.status-cancelado {
+  background: #fdecea;
+  color: #c62828;
+}
+
+h1 {
+  color: #ffffff;
+}

@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>Meu histórico de apostas</h1>
+
+  <div class="alert alert-erro" *ngIf="mensagemErro">{{ mensagemErro }}</div>
+  <p *ngIf="carregando">Carregando histórico...</p>
+
+  <div class="card" *ngIf="!carregando">
+    <p class="resumo" *ngIf="apostas.length > 0">
+      Total de pontos acumulados: <strong>{{ totalPontos() }}</strong>
+    </p>
+
+    <table *ngIf="apostas.length > 0">
+      <thead>
+        <tr>
+          <th>Jogo</th>
+          <th>Data</th>
+          <th>Meu palpite</th>
+          <th>Resultado final</th>
+          <th>Status</th>
+          <th>Pontos</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let aposta of apostas">
+          <td>{{ aposta.jogo.timeCasa.sigla }} x {{ aposta.jogo.timeFora.sigla }}</td>
+          <td>{{ aposta.jogo.dataHora | date: 'dd/MM/yyyy HH:mm' }}</td>
+          <td>{{ aposta.palpiteGolsCasa }} x {{ aposta.palpiteGolsFora }}</td>
+          <td>
+            <ng-container *ngIf="aposta.jogo.status === 'finalizado'; else aguardando">
+              {{ aposta.jogo.golsCasa }} x {{ aposta.jogo.golsFora }}
+            </ng-container>
+            <ng-template #aguardando>aguardando</ng-template>
+          </td>
+          <td><span class="status status-{{ aposta.status }}">{{ aposta.status }}</span></td>
+          <td>{{ aposta.pontosGanhos }}</td>
+          <td>
+            <button
+              class="btn btn-danger btn-sm"
+              *ngIf="aposta.jogo.status === 'agendado'"
+              (click)="remover(aposta._id)"
+            >
+              Remover
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="apostas.length === 0">Você ainda não fez nenhuma aposta.</p>
+  </div>
+</div>

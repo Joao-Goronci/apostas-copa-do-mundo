@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Wireframe - Login</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="wf-pagina">
+    <a class="wf-voltar" href="index.html">&larr; voltar para lista de wireframes</a>
+
+    <div class="wf-titulo">Tela de Login</div>
+
+    <div class="wf-caixa" style="max-width: 380px; margin: 0 auto;">
+      <p style="text-align:center; font-size: 12px; color:#777;">[ subtítulo: "Acesse sua conta para apostar" ]</p>
+
+      <div class="wf-campo">
+        <span class="wf-rotulo">[ E-mail ]</span>
+        <div class="wf-input"></div>
+      </div>
+
+      <div class="wf-campo">
+        <span class="wf-rotulo">[ Senha ]</span>
+        <div class="wf-input"></div>
+      </div>
+
+      <div class="wf-botao" style="width:100%; text-align:center; margin-bottom: 14px;">[ BOTÃO: Entrar ]</div>
+
+      <p style="text-align:center;">
+        <span class="wf-link">[ Ainda não tem conta? Cadastre-se ]</span>
+      </p>
+    </div>
+
+    <div class="wf-nota">
+      Fluxo: usuário informa e-mail/senha &rarr; sistema valida credenciais via API (POST /api/usuarios/login)
+      &rarr; em caso de sucesso, redireciona para a tela de Listagem de Jogos.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <a class="marca" routerLink="/jogos">🏆 Apostas Copa do Mundo</a>
+
+  <div class="links">
+    <a routerLink="/jogos" routerLinkActive="ativo">Jogos</a>
+
+    <ng-container *ngIf="authService.estaAutenticado(); else deslogado">
+      <a routerLink="/apostas/historico" routerLinkActive="ativo">Minhas apostas</a>
+      <span class="usuario">{{ authService.obterUsuario()?.nome }}</span>
+      <button class="btn-sair" (click)="sair()">Sair</button>
+    </ng-container>
+
+    <ng-template #deslogado>
+      <a routerLink="/login" routerLinkActive="ativo">Entrar</a>
+      <a routerLink="/cadastro" routerLinkActive="ativo">Cadastrar</a>
+    </ng-template>
+  </div>
+</nav>

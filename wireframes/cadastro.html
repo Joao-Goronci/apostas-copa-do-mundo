@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Wireframe - Cadastro</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="wf-pagina">
+    <a class="wf-voltar" href="index.html">&larr; voltar para lista de wireframes</a>
+
+    <div class="wf-titulo">Tela de Cadastro</div>
+
+    <div class="wf-caixa" style="max-width: 420px; margin: 0 auto;">
+      <p style="text-align:center; font-size: 12px; color:#777;">[ subtítulo: "Crie sua conta para começar a apostar" ]</p>
+
+      <div class="wf-campo">
+        <span class="wf-rotulo">[ Nome completo ]</span>
+        <div class="wf-input"></div>
+      </div>
+
+      <div class="wf-campo">
+        <span class="wf-rotulo">[ E-mail ]</span>
+        <div class="wf-input"></div>
+      </div>
+
+      <div class="wf-campo">
+        <span class="wf-rotulo">[ Senha ]</span>
+        <div class="wf-input"></div>
+      </div>
+
+      <div class="wf-campo">
+        <span class="wf-rotulo">[ Confirmar senha ]</span>
+        <div class="wf-input"></div>
+      </div>
+
+      <div class="wf-botao" style="width:100%; text-align:center; margin-bottom: 14px;">[ BOTÃO: Cadastrar ]</div>
+
+      <p style="text-align:center;">
+        <span class="wf-link">[ Já tem conta? Entrar ]</span>
+      </p>
+    </div>
+
+    <div class="wf-nota">
+      Fluxo: usuário preenche os dados &rarr; validação local (senhas coincidem) &rarr;
+      POST /api/usuarios/registrar &rarr; conta criada e usuário autenticado automaticamente.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Wireframe - Histórico de Apostas</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="wf-topo">
+    <div class="wf-logo">[ LOGO Apostas Copa ]</div>
+    <div class="wf-menu">
+      <span>Jogos</span>
+      <span>Minhas apostas</span>
+      <span>[ Nome do usuário ]</span>
+      <span>Sair</span>
+    </div>
+  </div>
+
+  <div class="wf-pagina">
+    <a class="wf-voltar" href="index.html">&larr; voltar para lista de wireframes</a>
+
+    <div class="wf-titulo">Histórico de Apostas</div>
+
+    <div class="wf-caixa">
+      <p>[ Total de pontos acumulados: <strong>4</strong> ]</p>
+
+      <table class="wf-tabela">
+        <thead>
+          <tr>
+            <th>[ Jogo ]</th>
+            <th>[ Data ]</th>
+            <th>[ Meu palpite ]</th>
+            <th>[ Resultado final ]</th>
+            <th>[ Status ]</th>
+            <th>[ Pontos ]</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FRA x DEN</td>
+            <td>22/06/2026 13:00</td>
+            <td>2 x 1</td>
+            <td>2 x 1</td>
+            <td><span class="wf-tag">acertou_placar</span></td>
+            <td>3</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>BRA x SRB</td>
+            <td>24/06/2026 16:00</td>
+            <td>1 x 0</td>
+            <td>aguardando</td>
+            <td><span class="wf-tag">pendente</span></td>
+            <td>0</td>
+            <td><span class="wf-link">[ Remover ]</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="wf-nota">
+      Dados carregados via GET /api/apostas/minhas. Apostas em jogos ainda "agendados" podem ser removidas
+      ou alteradas pelo usuário; apostas em jogos finalizados exibem o resultado e a pontuação obtida.
+    </div>
+  </div>
+</body>
+</html>

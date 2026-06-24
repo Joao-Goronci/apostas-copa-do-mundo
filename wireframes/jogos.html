@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Wireframe - Listagem de Jogos</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="wf-topo">
+    <div class="wf-logo">[ LOGO Apostas Copa ]</div>
+    <div class="wf-menu">
+      <span>Jogos</span>
+      <span>Minhas apostas</span>
+      <span>[ Nome do usuário ]</span>
+      <span>Sair</span>
+    </div>
+  </div>
+
+  <div class="wf-pagina">
+    <a class="wf-voltar" href="index.html">&larr; voltar para lista de wireframes</a>
+
+    <div class="wf-titulo">Listagem de Jogos da Copa do Mundo</div>
+
+    <div class="wf-grid">
+      <div class="wf-caixa">
+        <div class="wf-flex-entre">
+          <span class="wf-tag">[ fase: grupos ]</span>
+          <span class="wf-tag">[ 24/06 16:00 ]</span>
+        </div>
+        <div class="wf-flex-entre" style="margin: 14px 0;">
+          <div style="text-align:center;">
+            <span class="wf-placeholder-img"></span><br />[ BRA ]
+          </div>
+          <div>[ vs ]</div>
+          <div style="text-align:center;">
+            <span class="wf-placeholder-img"></span><br />[ SRB ]
+          </div>
+        </div>
+        <div class="wf-flex-entre">
+          <span style="font-size:12px; color:#777;">[ Estádio Nacional ]</span>
+          <span class="wf-tag">[ agendado ]</span>
+        </div>
+        <div class="wf-botao wf-botao-secundario" style="width:100%; text-align:center; margin-top: 10px;">[ BOTÃO: Fazer aposta ]</div>
+      </div>
+
+      <div class="wf-caixa">
+        <div class="wf-flex-entre">
+          <span class="wf-tag">[ fase: grupos ]</span>
+          <span class="wf-tag">[ 22/06 13:00 ]</span>
+        </div>
+        <div class="wf-flex-entre" style="margin: 14px 0;">
+          <div style="text-align:center;">
+            <span class="wf-placeholder-img"></span><br />[ FRA ]
+          </div>
+          <div>[ 2 x 1 ]</div>
+          <div style="text-align:center;">
+            <span class="wf-placeholder-img"></span><br />[ DEN ]
+          </div>
+        </div>
+        <div class="wf-flex-entre">
+          <span style="font-size:12px; color:#777;">[ Estádio Internacional ]</span>
+          <span class="wf-tag">[ finalizado ]</span>
+        </div>
+      </div>
+
+      <div class="wf-caixa-tracejada" style="display:flex; align-items:center; justify-content:center;">
+        [ ... mais cards de jogos (grid responsivo) ... ]
+      </div>
+    </div>
+
+    <div class="wf-nota">
+      Dados carregados via GET /api/jogos. O botão "Fazer aposta" só aparece para jogos com status "agendado"
+      e cuja data ainda não tenha ocorrido, e exige que o usuário esteja autenticado (caso contrário, leva ao Login).
+    </div>
+  </div>
+</body>
+</html>

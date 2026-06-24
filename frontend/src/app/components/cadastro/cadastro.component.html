@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="card cadastro-card">
+    <h1>Criar conta</h1>
+    <p class="subtitulo">Cadastre-se para começar a apostar nos jogos da Copa do Mundo</p>
+
+    <div class="alert alert-erro" *ngIf="mensagemErro">{{ mensagemErro }}</div>
+
+    <form [formGroup]="formulario" (ngSubmit)="cadastrar()">
+      <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input id="nome" type="text" formControlName="nome" placeholder="Seu nome" />
+        <small
+          class="erro-campo"
+          *ngIf="formulario.get('nome')?.invalid && formulario.get('nome')?.touched"
+        >
+          Informe seu nome (mínimo 3 caracteres)
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" formControlName="email" placeholder="seuemail@exemplo.com" />
+        <small
+          class="erro-campo"
+          *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched"
+        >
+          Informe um e-mail válido
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" formControlName="senha" placeholder="••••••••" />
+        <small
+          class="erro-campo"
+          *ngIf="formulario.get('senha')?.invalid && formulario.get('senha')?.touched"
+        >
+          A senha deve ter pelo menos 6 caracteres
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmarSenha">Confirmar senha</label>
+        <input id="confirmarSenha" type="password" formControlName="confirmarSenha" placeholder="••••••••" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="carregando">
+        {{ carregando ? 'Cadastrando...' : 'Cadastrar' }}
+      </button>
+    </form>
+
+    <p class="rodape">
+      Já tem uma conta? <a routerLink="/login">Entrar</a>
+    </p>
+  </div>
+</div>

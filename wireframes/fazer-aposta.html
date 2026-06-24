@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Wireframe - Fazer Aposta</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="wf-topo">
+    <div class="wf-logo">[ LOGO Apostas Copa ]</div>
+    <div class="wf-menu">
+      <span>Jogos</span>
+      <span>Minhas apostas</span>
+      <span>[ Nome do usuário ]</span>
+      <span>Sair</span>
+    </div>
+  </div>
+
+  <div class="wf-pagina">
+    <a class="wf-voltar" href="index.html">&larr; voltar para lista de wireframes</a>
+
+    <div class="wf-titulo">Fazer Aposta</div>
+
+    <div class="wf-caixa" style="max-width: 480px; margin: 0 auto;">
+      <div class="wf-flex-entre" style="justify-content:center; gap: 24px;">
+        <div style="text-align:center;">
+          <span class="wf-placeholder-img"></span><br />[ BRA ]
+        </div>
+        <div>[ vs ]</div>
+        <div style="text-align:center;">
+          <span class="wf-placeholder-img"></span><br />[ SRB ]
+        </div>
+      </div>
+
+      <p style="text-align:center; font-size:12px; color:#777;">[ 24/06/2026 16:00 · Estádio Nacional · Fase: grupos ]</p>
+
+      <div class="wf-flex-entre" style="gap: 16px;">
+        <div class="wf-campo" style="flex:1;">
+          <span class="wf-rotulo">[ Gols BRA ]</span>
+          <div class="wf-input" style="text-align:center;"></div>
+        </div>
+        <div class="wf-campo" style="flex:1;">
+          <span class="wf-rotulo">[ Gols SRB ]</span>
+          <div class="wf-input" style="text-align:center;"></div>
+        </div>
+      </div>
+
+      <div class="wf-botao" style="width:100%; text-align:center;">[ BOTÃO: Confirmar aposta ]</div>
+    </div>
+
+    <div class="wf-nota">
+      Fluxo: tela acessível somente para usuários autenticados (rota protegida por AuthGuard).
+      O palpite é enviado via POST /api/apostas. Caso o jogo já tenha iniciado, a API rejeita a aposta.
+    </div>
+  </div>
+</body>
+</html>

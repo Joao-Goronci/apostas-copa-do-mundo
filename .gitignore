@@ -1,0 +1,37 @@
+# Dependências
+node_modules/
+**/node_modules/
+
+# Builds
+dist/
+**/dist/
+.angular/
+**/.angular/
+
+# Variáveis de ambiente (segredos)
+.env
+**/.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Cobertura de testes
+coverage/
+**/coverage/
+
+# Configurações locais do Claude Code (específicas da máquina)
+.claude/settings.local.json
