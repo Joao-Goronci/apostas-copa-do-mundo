@@ -4,6 +4,8 @@ Sistema completo para gerenciamento de apostas da Copa do Mundo, construído com
 
 Os usuários podem se cadastrar, consultar os jogos da Copa, registrar palpites de placar e acompanhar seu histórico e pontuação. Administradores gerenciam times, jogos e registram os resultados, que disparam o cálculo automático de pontos das apostas.
 
+**Repositório:** https://github.com/Joao-Goronci/apostas-copa-do-mundo
+
 ## Estrutura do projeto
 
 ```
